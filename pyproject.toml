@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hetman-pipeline-plugin-i18n"
+version = "1.0.1"
+description = "Hetman Pipeline Plugin I18n is a plugin for Hetman Pipeline that provides i18n support."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+authors = [{ name = "Hetman", email = "degadupeko@my-relay.app" }]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = ["hetman-pipeline"]
+
+[project.urls]
+Homepage = "https://pipeline.hetman.app"
+Documentation = "https://github.com/hetman-app/hetman-pipeline-plugin-i18n"
+Repository = "https://github.com/hetman-app/hetman-pipeline-plugin-i18n"
+Issues = "https://github.com/hetman-app/hetman-pipeline-plugin-i18n/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
