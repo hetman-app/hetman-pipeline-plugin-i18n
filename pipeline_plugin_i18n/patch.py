@@ -60,6 +60,22 @@ def initialize_pipeline_plugin_i18n():
     )
 
     PipelinePluginI18n.register_handler(
+        handler=Condition.ExactLength,
+        translations={
+            HandlerMode.ROOT:
+                {
+                    "en":
+                        Condition.ExactLength.ERROR_TEMPLATES[HandlerMode.ROOT],
+                    "pl":
+                        lambda self:
+                        f"Nieprawidłowa długość. Wymagana długość to dokładnie {self.argument} znaków."
+                        if isinstance(self.value, str) else
+                        f"Nieprawidłowa liczba elementów. Wymagana liczba to dokładnie {self.argument}."
+                }
+        },
+    )
+
+    PipelinePluginI18n.register_handler(
         handler=Condition.MinNumber,
         translations={
             HandlerMode.ROOT:

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hetman-pipeline-plugin-i18n"
-version = "1.0.1"
+version = "1.0.2"
 description = "Hetman Pipeline Plugin I18n is a plugin for Hetman Pipeline that provides i18n support."
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.10"
@@ -17,7 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
 ]
-dependencies = ["hetman-pipeline"]
+dependencies = ["hetman-pipeline>=2.2.2"]
 
 [project.urls]
 Homepage = "https://pipeline.hetman.app"
