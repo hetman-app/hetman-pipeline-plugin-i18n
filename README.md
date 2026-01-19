@@ -6,8 +6,8 @@
 
 ## Features
 
--   Comprehensive translations for all standard `Condition` and `Match` handlers.
--   Simple initialization to register all translations globally.
+- Comprehensive translations for all standard `Condition` and `Match` handlers.
+- Simple initialization to register all translations globally.
 
 ## Installation
 
@@ -19,11 +19,16 @@ pip install hetman-pipeline[i18n]
 
 Initialize the plugin at the start of your application to register the translations.
 
+You must call `set_base_locale` before running the first handler to ensure the system correctly maps the initial translation state.
+
 ```python
 from pipeline_plugin_i18n import initialize_pipeline_plugin_i18n
 
 # Register translations for standard handlers
 initialize_pipeline_plugin_i18n()
+
+# Set the base locale
+PipelinePluginI18n.set_base_locale("en")
 ```
 
 ## Context Management
@@ -72,5 +77,5 @@ PipelinePluginI18n.register_handler(
 
 ## Supported Languages
 
--   English (`en`) - Default
--   Polish (`pl`)
+- English (`en`)
+- Polish (`pl`)
