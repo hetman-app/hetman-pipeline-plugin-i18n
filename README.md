@@ -12,7 +12,7 @@
 ## Installation
 
 ```bash
-pip install hetman-pipeline[i18n]
+pip install "hetman-pipeline[i18n]"
 ```
 
 ## Quick Start
