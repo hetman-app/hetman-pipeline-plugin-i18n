@@ -544,6 +544,17 @@ def initialize_pipeline_plugin_i18n():
         },
     )
 
+    PipelinePluginI18n.register_handler(
+        handler=Match.Format.JWT,
+        translations={
+            HandlerMode.ROOT:
+                {
+                    "en": Match.Format.JWT.ERROR_TEMPLATES[HandlerMode.ROOT],
+                    "pl": lambda _: "Nieprawidłowy format JWT.",
+                }
+        },
+    )
+
     # --- Match Handlers: Localization ---
 
     PipelinePluginI18n.register_handler(
