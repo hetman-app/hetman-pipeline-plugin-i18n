@@ -4,17 +4,14 @@ from functools import partial
 from typing import TYPE_CHECKING
 
 from krywok_kit_localize import Localize
-from pipeline.handlers.condition_handler.resources.types import \
-    ConditionErrorTemplate
+from pipeline.handlers.condition.resources.types import ConditionErrorTemplate
 
 from pipeline_plugin_i18n.resources.exceptions import \
     PipelinePluginI18nException
 from pipeline_plugin_i18n.resources.types import Translation, Translations
 
 if TYPE_CHECKING:
-    from pipeline.handlers.condition_handler.condition_handler import \
-        ConditionHandler
-    from pipeline.handlers.match_handler.match_handler import MatchHandler
+    from pipeline import ConditionHandler, MatchHandler
 
 
 class PipelinePluginI18n(Localize):

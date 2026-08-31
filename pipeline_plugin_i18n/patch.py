@@ -1,5 +1,4 @@
-from pipeline.handlers import Condition, Match
-from pipeline.handlers.base_handler.resources.constants import HandlerMode
+from pipeline import Condition, HandlerMode, Match
 
 from pipeline_plugin_i18n.plugin import PipelinePluginI18n
 

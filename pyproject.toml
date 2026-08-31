@@ -4,20 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "krywok-pipeline-plugin-i18n"
-version = "1.0.0"
+version = "1.0.1"
 description = "Krywok Pipeline Plugin I18n is a plugin for Krywok Pipeline that provides i18n support."
 readme = { file = "README.md", content-type = "text/markdown" }
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 license-files = ["LICENSE"]
 authors = [{ name = "Krywok", email = "degadupeko@my-relay.app" }]
 classifiers = [
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
 ]
-dependencies = ["krywok-pipeline>=1.0.0", "krywok-kit-localize>=1.0.0"]
+dependencies = ["krywok-pipeline>=2.0.0", "krywok-kit-localize>=1.0.0"]
 
 [project.urls]
 Homepage = "https://pipeline.krywok.com"

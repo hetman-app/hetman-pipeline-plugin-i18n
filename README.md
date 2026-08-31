@@ -60,17 +60,18 @@ print(current_locale)  # Output: "pl"
 You can register your own translations for any `Condition` or `Match` handler.
 
 ```python
-from pipeline.handlers import Match
-from pipeline.handlers.base_handler.resources.constants import HandlerMode
+from pipeline import HandlerMode, Match, Pipeline
+
 from pipeline_plugin_i18n import PipelinePluginI18n
 
 PipelinePluginI18n.register_handler(
     handler=Match.Text.Letters,
     translations={
-        HandlerMode.ROOT: {
-            "en": Match.Text.Letters.ERROR_TEMPLATES[HandlerMode.ROOT],
-            "pl": "Musi zawierać tylko litery (np. Aaaaa).",
-        }
+        HandlerMode.ROOT:
+            {
+                "en": Match.Text.Letters.ERROR_TEMPLATES[HandlerMode.ROOT],
+                "pl": lambda self: "Musi zawierać tylko litery (np. Aaaaa)."
+            }
     },
 )
 ```
